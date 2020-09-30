@@ -17,8 +17,8 @@ TARGET = RCM_GCC
 
 all:	$(TARGET)
 
-$(TARGET):	main.c graph.o rcm.o rcm_parallel.o csr.o quicksort.o
-	$(CC) $(CFLAGS) -o $(TARGET) $(MATH) $(OPENMP) main.c graph.o rcm.o rcm_parallel.o csr.o quicksort.o
+$(TARGET):	main_unified.c graph.o rcm.o rcm_parallel.o csr.o quicksort.o
+	$(CC) $(CFLAGS) -o $(TARGET) $(MATH) $(OPENMP) main_unified.c graph.o rcm.o rcm_parallel.o csr.o quicksort.o
 
 graph.o: src/graph/graph.h src/graph/graph.c
 	$(CC) $(CFLAGS) $(MATH) $(OPENMP) -c src/graph/graph.c

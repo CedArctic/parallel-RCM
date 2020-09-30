@@ -22,7 +22,7 @@ ENDIF()
 SET(OMP_WAIT_POLICY "passive")
 #SET(OMP_DYNAMIC "false")
 
-add_executable(RCM main.c src/rcm/rcm.h src/rcm/rcm.c src/quicksort/quicksort.h src/quicksort/quicksort.c
+add_executable(RCM main_unified.c src/rcm/rcm.h src/rcm/rcm.c src/quicksort/quicksort.h src/quicksort/quicksort.c
         src/rcm_parallel/rcm_parallel.c src/rcm_parallel/rcm_parallel.h src/csr/csr.c src/csr/csr.h src/graph/graph.c
         src/graph/graph.h config.h)
 
